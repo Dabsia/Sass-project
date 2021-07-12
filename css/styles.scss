@@ -1,0 +1,244 @@
+$body-bgcolor: #fff;
+$font-size: 14px;
+$first-box-bg: #E0F2FF;
+$h3-size: 20px;
+$taskcolor: #4F708C;
+$box-bg-color: #162034;
+$p-color: #fff;
+$box1bgcolor: #F2F8FD;
+$button-bg-color: #516EEF;
+$dollar-color:rgb(177, 158, 158); 
+$logo-bg-color: #3F5FE1;
+
+body{
+    background-color: $body-bgcolor;
+    font-size: $font-size;
+    
+}
+@import 'responsive';
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    @include mediaQuery(1230px){
+      
+        flex-wrap: wrap;
+
+        .first-box{
+            width: 95%;
+        }
+  
+    }
+    @include mediaQuery(500px){
+        .box-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+
+            .box1{
+                width: 95%;
+                margin-bottom: 20px;
+            }
+            .box2{
+                width: 95%;
+                margin-left: 0;
+            }
+        }
+       .first-box .box{
+           width: 90%;
+       }
+
+
+       
+    }
+    
+}
+.logo img{
+    width: 50px;
+}
+
+
+.first-box{
+    padding: 20px;
+    background-color: $first-box-bg;
+    border-radius: 12px;
+    width: 30%;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-right: 50px;
+    
+
+    .holding{
+        margin: 0 auto;
+    }
+    h3{
+        font-size: $h3-size;
+        font-family: montserrat;
+        
+    }
+    .task{
+        font-weight: 300;
+        color: $taskcolor;
+    }
+    p{
+        font-family: montserrat;
+        
+    }
+
+    .box{
+        margin: 70px auto 0;
+        width: 70%;
+        background: $box-bg-color;
+        border: 3px solid white;
+        border-radius: 12px;
+        padding-bottom: 10px;
+    }
+
+    .box {
+        .profile {
+            img{
+                width: 50px;
+                height: 50px;
+                margin-left: 20px;
+            }
+        }
+    }
+    .profile{
+        display: flex;
+    }
+    .roles p{
+        margin-left: 10px;
+        font-size: 16px;
+        color: $p-color;
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+    .roles p:nth-child(even){
+        color: gray;
+        margin-bottom: 0;
+    }
+    .project{
+        margin-bottom:30px;
+        line-height: 17px;
+        color: $p-color;
+        margin-left: 20px;
+        margin-right: 20px;
+        
+    }
+    
+}
+
+@mixin buttons{
+    padding: .7rem 1rem;
+    background-color: $button-bg-color;
+    color: $p-color;
+    border-radius: 12px;
+    border: none;
+    width:90%
+}
+
+
+@mixin buttons2{
+    padding: .7rem 1rem;
+    background-color: $body-bgcolor;
+    color: $button-bg-color;
+    border-radius: 12px;
+    border: none;
+
+    width:90%
+}
+.second-box{
+    margin-left:30px ;
+    width: 70%;
+
+    .what-we-do{
+        
+        margin-top: 70px;
+        margin-bottom: 50px;
+
+        h3{
+            font-size: $h3-size;
+            font-family: montserrat;
+            
+        }
+        p{
+            font-family: montserrat;
+        }
+    }
+    .box-wrapper{
+        display: flex;
+    }
+    .box1{
+        background-color: $box1bgcolor;
+        padding: 20px;
+        border-radius: 12px;
+        font-family: montserrat;
+        width: 40%;
+
+        input{
+            margin-bottom: 20px;
+        }
+        .btn{
+            @include buttons
+        }
+        .ri-arrow-right-fill{
+            margin-left: 10px;
+        }
+        .logo-promo .ri-focus-2-line{
+            background-color:$button-bg-color;
+            border-radius: 5px;
+            margin-right: 5px;
+            padding: 5px;
+        }
+        .amount{
+            font-size: 24px;
+        }
+        .dollar{
+            color: $dollar-color;
+            margin-right: 3px;
+        }
+        small{
+            font-size: 10px;
+        }
+
+
+    }
+    .box2{
+        background-color: $button-bg-color;
+        padding: 20px;
+        border-radius: 12px;
+        margin-left: 30px;
+        font-family: montserrat;
+        width: 40%;
+        color: $p-color;
+
+        input{
+            margin-bottom: 20px;
+        }
+        .btn-2{
+            @include buttons2
+        }
+        .ri-arrow-right-fill{
+            margin-left: 10px;
+        }
+        .logo-promo .ri-focus-2-line{
+            background-color:$logo-bg-color;
+            border-radius: 5px;
+            margin-right: 5px;
+            padding: 5px;
+        }
+        .amount{
+            font-size: 24px;
+        }
+        .dollar{
+            color: $dollar-color;
+            margin-right:3px ;
+        }
+        small{
+            font-size: 10px;
+        }
+
+
+    }
+}
