@@ -83,7 +83,7 @@ body {
   margin: 70px auto 0;
   width: 70%;
   background: #162034;
-  border: 3px solid white;
+  border: 3px solid #fff;
   border-radius: 12px;
   padding-bottom: 10px;
 }
@@ -109,7 +109,7 @@ body {
 }
 
 .first-box .roles p:nth-child(even) {
-  color: gray;
+  color: #b19e9e;
   margin-bottom: 0;
 }
 
@@ -126,17 +126,17 @@ body {
   width: 70%;
 }
 
-.second-box .what-we-do {
+.second-box .trial {
   margin-top: 70px;
   margin-bottom: 50px;
 }
 
-.second-box .what-we-do h3 {
+.second-box .trial h3 {
   font-size: 20px;
   font-family: montserrat;
 }
 
-.second-box .what-we-do p {
+.second-box .trial p {
   font-family: montserrat;
 }
 
