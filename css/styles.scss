@@ -1,3 +1,4 @@
+//Variables
 $body-bgcolor: #fff;
 $font-size: 14px;
 $first-box-bg: #E0F2FF;
@@ -15,13 +16,17 @@ body{
     font-size: $font-size;
     
 }
+// Make the site Responsive
+
 @import 'responsive';
 .container{
+    // Normal styling of site
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
 
+    // Making the container wrap to avoid scrolling
     @include mediaQuery(1230px){
       
         flex-wrap: wrap;
@@ -31,6 +36,9 @@ body{
         }
   
     }
+
+    // Mediaquery for the cards
+
     @include mediaQuery(500px){
         .box-wrapper{
             display: flex;
@@ -39,10 +47,12 @@ body{
             .box1{
                 width: 95%;
                 margin-bottom: 20px;
+                margin: auto;
             }
             .box2{
                 width: 95%;
                 margin-left: 0;
+                margin: auto;
             }
         }
 
@@ -58,6 +68,7 @@ body{
 }
 
 
+// styling for the first container
 .first-box{
     padding: 20px;
     background-color: $first-box-bg;
@@ -128,6 +139,7 @@ body{
     
 }
 
+// Mixins for the card component
 @mixin buttons{
     padding: .7rem 1rem;
     background-color: $button-bg-color;
@@ -169,6 +181,8 @@ body{
     .box-wrapper{
         display: flex;
     }
+
+    // box 1 styling
     .box1{
         background-color: $box1bgcolor;
         padding: 20px;
@@ -204,6 +218,8 @@ body{
 
 
     }
+
+    // box 2 styling
     .box2{
         background-color: $button-bg-color;
         padding: 20px;
